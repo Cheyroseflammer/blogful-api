@@ -22,10 +22,10 @@ describe('Articles Endpoints', function () {
 
   afterEach('cleanup', () => db('blogful_articles').truncate());
 
-  describe(`GET /articles`, () => {
+  describe(`GET /api/articles`, () => {
     context(`Given no articles`, () => {
       it(`responds with 200 and an empty list`, () => {
-        return supertest(app).get('/articles').expect(200, []);
+        return supertest(app).get('api/articles').expect(200, []);
       });
     });
 
